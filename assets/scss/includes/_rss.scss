@@ -1,0 +1,125 @@
+$light-green: #19903F;
+$dark-green: #114D3B;
+$light-blue: #6AC5AC;
+$light-orange: #E1985E;
+$orange: #D95531;
+$red: #F6403D;
+$white: #FFF;
+$black: #000;
+
+#rss {
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 700px;
+    width: 100%;
+    border: 1px solid $black;
+    margin: 0 auto;
+    padding: 1rem;
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .rss {
+        &-feeds__flash {
+            margin: 0 auto;
+            width: 100%;
+            p {
+                padding: 1rem;
+                text-align: center;
+                border-radius: 3px;
+                font-size: 16px;
+                &.success {
+                    background-color: $light-green;
+                    color: $white;
+                }
+                &.error {
+                    background-color: $orange;
+                    color: $white;
+                }
+            }
+        }
+        &-input {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% + 1rem);
+            margin: 1rem 0;
+        }
+        &-input,
+        &-feeds {
+            width: 100%;
+            input {
+                margin: 1rem 0;
+                font-size: 16px;
+                max-width: 50%;
+                margin: 0 1rem;
+                width: 100%;
+                border-radius: 5px;
+                padding: 0.5rem;
+                background-color: transparent;
+                border: 0;
+                font-weight: bold;
+            }
+            input[type='text'] {
+                border: 1px solid $orange;
+            }
+            input[type='submit'] {
+                color: $white;
+                background-color: $dark-green;
+            }
+            & .rss-link {
+                display: flex;
+                margin: 1rem 0;
+                width: 100%;
+                p {
+                    max-width: 50%;
+                    width: 100%;
+                    margin-right: auto;
+                    overflow-y: scroll;
+                }
+                &__get-content,
+                &__update,
+                &__delete {
+                    margin-left: auto;
+                    font-weight: bold;
+                    background-color: transparent;
+                    border: 0;
+                    border-radius: 5px;
+                    padding: 0.2rem 0.5rem;
+                }
+                &__get-content {
+                    background-color: $light-green;
+                    color: $white;
+                }
+                &__update,
+                input[name='update_submit'] {
+                    background-color: $light-blue;
+                    color: $white;
+                }
+                &__delete {
+                    background-color: $orange;
+                    color: $white;
+                }
+            }
+        }
+        &-feeds__table {
+            max-height: 300px;
+            overflow: scroll;
+            table {
+                th {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    background-color: $light-orange;
+                }
+                td {
+                    background-color: rgba($light-orange, 0.5);
+                }
+                th, td {
+                    border: 1px solid $black;
+                    padding: 0.2rem 0.5rem;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+}
